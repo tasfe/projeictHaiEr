@@ -6,30 +6,40 @@
 header{border-bottom: 1px solid #f2f2f2;}
 header .header a{float:left;margin:22px;}
 
-main{height:590px;background:url(../img/login-banner.jpg) no-repeat 50% 25%;position:relative;}
-main .login-b{position:absolute;width:490px;height:410px;background:#e8e8e8;right:132px;top:35px;border-radius:3px;}
-main .login{position:absolute;width:490px;height:400px;background:#fff;right:127px;top:40px;border-radius:3px;}
+main{height:590px;background:url(../img/login-banner.jpg) no-repeat 50% 25%;}
+main .main{position:relative;}
+main .login-b{position:absolute;width:490px;height:410px;background:#e8e8e8;right:22px;top:35px;border-radius:3px;}
+main .login{position:absolute;width:490px;height:400px;background:#fff;right:17px;top:40px;border-radius:3px;}
 main .login .login-t{border-bottom:1px solid #ddd;padding:13px 0 0 15px;}
 main .login .login-t h3{float:left;font:22px/49px "";color:#606060;}
 main .login .login-t a{float:right;font:12px/49px "";color:#005AAA;margin-right:20px;}
-main .login .login-c{position:relative;text-align: center;}
-main .login .login-c p{font:14px/40px "";border-bottom: 2px solid #e4e4e4;width:258px;margin:0 auto;}
-main .login .login-c p a:nth-child(1){border-bottom: 2px solid #32beff;padding:10px 30px;color:#32beff;}
-main .login .login-c p a:nth-child(2){padding:10px 13px;}
-main .login .login-c p a:hover{color:#606060;}
+main .login .login-c{position:relative;text-align: center;height:255px;padding-bottom:28px;border-bottom:1px solid #ddd;}
+main .login .login-c p{font:14px/40px "";border-bottom: 2px solid #e4e4e4;width:258px;margin:0 auto;width:258px;height:42px;}
+main .login .login-c p b:nth-child(1){border-bottom: 2px solid #32beff;display:inline-block;height:42px;width:100px;color:#32beff;}
+main .login .login-c p b:nth-child(2){display:inline-block;height:42px;width:150px;}
+main .login .login-c p b:hover{color:#606060;}
 
-main .login .login-c .login-common{position:absolute;margin-top:15px;}
-main .login .login-c .login-common input{padding-left:22px;margin-top:20px;width:238px;height:32px;border:1px solid #e4e4e4;border-radius:3px;}
+main .login .login-c .login-common{position:absolute;padding:15px 114px 0 114px;display:block;}
+main .login .login-c .login-common input:nth-of-type(1){padding-left:22px;margin-top:20px;width:238px;height:32px;border:1px solid #e4e4e4;border-radius:3px;}
+main .login .login-c .login-common input:nth-of-type(2){padding-left:22px;margin-top:20px;width:238px;height:32px;border:1px solid #e4e4e4;border-radius:3px;}
+main .login .login-c .login-common .miandenglu{position:absolute;left:120px;top:140px;}
+main .login .login-c .login-common span{position:absolute;left:140px;top:140px;color:#606060;}
+main .login .login-c .login-common .forget{position:absolute;right:115px;top:140px;}
+main .login .login-c .login-common input:nth-of-type(4){padding-left:22px;margin-top:50px;width:260px;height:40px;border:1px solid #e4e4e4;border-radius:4px;background:#32beff;font:16px/40px "";color:#fff;text-align: center;}
 
+main .login .login-c .login-phone{position:absolute;padding:15px 114px 0 114px;display:none;}
+main .login .login-c .login-phone input:nth-of-type(1){padding-left:22px;margin-top:20px;width:238px;height:32px;border:1px solid #e4e4e4;border-radius:3px;}
+main .login .login-c .login-phone input:nth-of-type(2){padding-left:22px;margin-top:20px;width:238px;height:32px;border:1px solid #e4e4e4;border-radius:3px;}
+main .login .login-c .login-phone input:nth-of-type(3){padding-left:22px;margin-top:50px;width:260px;height:40px;border:1px solid #e4e4e4;border-radius:4px;background:#32beff;font:16px/40px "";color:#fff;text-align: center;}
 
-main .login .login-c .login-phone{position:absolute;display:none;}
-
-
-
-
-
-
-
+main .login .login-other{padding:14px 10px;font:12px/20px "";color:#606060;}
+main .login .login-other a{padding:2px 3px 2px 22px;}
+main .login .login-other a:nth-of-type(1){background:url(../img/login-other1.jpg) no-repeat;}
+main .login .login-other a:nth-of-type(2){background:url(../img/login-other2.jpg) no-repeat;}
+main .login .login-other a:nth-of-type(3){background:url(../img/login-other3.jpg) no-repeat;}
+main .login .login-other a:nth-of-type(4){background:url(../img/login-other4.jpg) no-repeat;}
+main .login .login-other a:nth-of-type(5){background:url(../img/login-other5.jpg) no-repeat;}
+main .login .login-other a:nth-of-type(6){background:url(../img/login-other6.jpg) no-repeat;}
 
 footer{background:#e1e1e1;text-align: center;height:139px;padding-top:21px;font:12px/24px "";color:#606060;}
 footer a{color:#606060;}
