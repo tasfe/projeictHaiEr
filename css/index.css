@@ -537,4 +537,11 @@ footer a {
 footer a:hover {
   color: #005AAA; }
 
-/*# sourceMappingURL=ceshi.css.map */
+footer .footer-b {
+  padding-top: 10px; }
+
+footer .footer-b img {
+  width: 108px;
+  height: 40px; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,109 @@
+/* CSS Document */
+.margin {
+  width: 1050px;
+  margin: 0 auto; }
+
+header {
+  border-bottom: 1px solid #f2f2f2; }
+
+header .header a {
+  float: left;
+  margin: 22px; }
+
+main {
+  height: 590px;
+  background: url(../img/login-banner.jpg) no-repeat 50% 25%;
+  position: relative; }
+
+main .login-b {
+  position: absolute;
+  width: 490px;
+  height: 410px;
+  background: #e8e8e8;
+  right: 132px;
+  top: 35px;
+  border-radius: 3px; }
+
+main .login {
+  position: absolute;
+  width: 490px;
+  height: 400px;
+  background: #fff;
+  right: 127px;
+  top: 40px;
+  border-radius: 3px; }
+
+main .login .login-t {
+  border-bottom: 1px solid #ddd;
+  padding: 13px 0 0 15px; }
+
+main .login .login-t h3 {
+  float: left;
+  font: 22px/49px "";
+  color: #606060; }
+
+main .login .login-t a {
+  float: right;
+  font: 12px/49px "";
+  color: #005AAA;
+  margin-right: 20px; }
+
+main .login .login-c {
+  position: relative;
+  text-align: center; }
+
+main .login .login-c p {
+  font: 14px/40px "";
+  border-bottom: 2px solid #e4e4e4;
+  width: 258px;
+  margin: 0 auto; }
+
+main .login .login-c p a:nth-child(1) {
+  border-bottom: 2px solid #32beff;
+  padding: 10px 30px;
+  color: #32beff; }
+
+main .login .login-c p a:nth-child(2) {
+  padding: 10px 13px; }
+
+main .login .login-c p a:hover {
+  color: #606060; }
+
+main .login .login-c .login-common {
+  position: absolute;
+  margin-top: 15px; }
+
+main .login .login-c .login-common input {
+  padding-left: 22px;
+  margin-top: 20px;
+  width: 238px;
+  height: 32px;
+  border: 1px solid #e4e4e4;
+  border-radius: 3px; }
+
+main .login .login-c .login-phone {
+  position: absolute;
+  display: none; }
+
+footer {
+  background: #e1e1e1;
+  text-align: center;
+  height: 139px;
+  padding-top: 21px;
+  font: 12px/24px "";
+  color: #606060; }
+
+footer a {
+  color: #606060; }
+
+footer a:hover {
+  color: #005AAA; }
+
+footer .footer-b {
+  padding-top: 10px; }
+
+footer .footer-b img {
+  width: 108px;
+  height: 40px; }
+
+/*# sourceMappingURL=login.css.map */
