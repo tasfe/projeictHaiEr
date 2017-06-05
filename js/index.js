@@ -205,38 +205,48 @@ $(function(){
 
 
 //nav
-$(".ul1 li").eq(0).on("mouseenter",function(){
-	$(".bingxiang").css({display:"block"});
-	$(".bingxiang").animate({
-		left:"192px",
-	},500)
-	$(".bingxiang-c").animate({
-		left:"207px",
-	},700)
-	$(".bingxiang-r").animate({
-		left:"439px",
-	},1000)
-});
-$(".bingxiang").on("mouseenter",function(){
-	$(".bingxiang").css({display:"block"});
-});
-$(".bingxiang").on("mouseleave",function(){
-	$(".bingxiang").css({display:"none"});
-});
-$(".ul1 li").eq(0).on("mouseleave",function(){
-	$(".bingxiang").css({display:"none"});
-});
-$("#banner").on("mouseleave",function(){
-	$(".bingxiang").animate({
-		left:"0px",
-	},300)
-	$(".bingxiang-c").animate({
-		left:"0px",
-	},400)
-	$(".bingxiang-r").animate({
-		left:"0px",
-	},500)
-})
+	$(".ul1 li").eq(0).on("mouseenter",function(){
+		$(".bingxiang").css({display:"block"});
+		$(".bingxiang-l").animate({
+			left:"0px",
+		},200)
+		$(".bingxiang-c").animate({
+			left:"207px",
+		},300)
+		$(".bingxiang-r").animate({
+			left:"439px",
+		},400)
+	});
+	
+	$(".bingxiang").on("mouseenter",function(){
+		$(".bingxiang").css({display:"block"});
+	});
+	$(".bingxiang").on("mouseleave",function(){
+		$(".bingxiang").css({display:"none"});
+		$(".bingxiang-l").animate({
+			left:"-192px",
+		},200)
+		$(".bingxiang-c").animate({
+			left:"0px",
+		},300)
+		$(".bingxiang-r").animate({
+			left:"0px",
+		},400)
+	});
+	$(".ul1 li").eq(0).on("mouseleave",function(){
+		$(".bingxiang").css({display:"none"});
+	});
+	$("#banner").on("mouseenter",function(){
+		$(".bingxiang-l").animate({
+			left:"-192px",
+		},200)
+		$(".bingxiang-c").animate({
+			left:"0px",
+		},300)
+		$(".bingxiang-r").animate({
+			left:"0px",
+		},400)
+	})
 
 
 //main-top

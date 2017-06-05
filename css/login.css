@@ -41,7 +41,7 @@ main .login .login-t {
 
 main .login .login-t h3 {
   float: left;
-  font: 22px/49px "";
+  font: 22px/49px "Microsoft Yahei";
   color: #606060; }
 
 main .login .login-t a {
@@ -82,7 +82,7 @@ main .login .login-c p b:hover {
 
 main .login .login-c .login-common {
   position: absolute;
-  padding: 15px 114px 0 114px;
+  padding: 15px 0px 0 114px;
   display: block; }
 
 main .login .login-c .login-common input:nth-of-type(1) {
@@ -106,7 +106,7 @@ main .login .login-c .login-common .miandenglu {
   left: 120px;
   top: 140px; }
 
-main .login .login-c .login-common span {
+main .login .login-c .login-common span:nth-of-type(3) {
   position: absolute;
   left: 140px;
   top: 140px;
@@ -114,11 +114,10 @@ main .login .login-c .login-common span {
 
 main .login .login-c .login-common .forget {
   position: absolute;
-  right: 115px;
+  right: 10px;
   top: 140px; }
 
 main .login .login-c .login-common input:nth-of-type(4) {
-  padding-left: 22px;
   margin-top: 50px;
   width: 260px;
   height: 40px;
@@ -151,7 +150,6 @@ main .login .login-c .login-phone input:nth-of-type(2) {
   border-radius: 3px; }
 
 main .login .login-c .login-phone input:nth-of-type(3) {
-  padding-left: 22px;
   margin-top: 50px;
   width: 260px;
   height: 40px;
@@ -168,7 +166,8 @@ main .login .login-other {
   color: #606060; }
 
 main .login .login-other a {
-  padding: 2px 3px 2px 22px; }
+  display: inline-block;
+  padding: 0px 2px 0px 22px; }
 
 main .login .login-other a:nth-of-type(1) {
   background: url(../img/login-other1.jpg) no-repeat; }

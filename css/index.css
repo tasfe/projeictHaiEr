@@ -176,15 +176,16 @@ nav .nav .nav-l .nav-l-b .ul1 li a:hover {
 
 nav .nav .nav-l .nav-l-b .bingxiang {
   display: none;
+  /*width:680px;*/
   background: #f0f0f0;
   position: absolute;
-  /*left:192px;*/
+  left: 192px;
   top: 0px;
   height: 425px;
   z-index: 50; }
 
 nav .nav .nav-l .nav-l-b .bingxiang .bingxiang-l {
-  float: left;
+  left: -192px;
   height: 100%;
   width: 207px;
   background: #fff; }
@@ -217,7 +218,6 @@ nav .nav .nav-l .nav-l-b .bingxiang .bingxiang-l ul li a:hover {
   color: #005AAA; }
 
 nav .nav .nav-l .nav-l-b .bingxiang .bingxiang-c {
-  float: left;
   width: 232px;
   position: absolute;
   /*left:207px;*/
@@ -247,7 +247,6 @@ nav .nav .nav-l .nav-l-b .bingxiang .bingxiang-r {
   position: absolute;
   /*left:439px;*/
   top: 0px;
-  float: left;
   padding-top: 155px;
   height: 100%;
   box-sizing: border-box;

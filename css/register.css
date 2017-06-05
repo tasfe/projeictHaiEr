@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/* CSS Document */
+.margin {
+  width: 1050px;
+  margin: 0 auto; }
+
+header {
+  border-bottom: 1px solid #f2f2f2; }
+
+header .header a {
+  float: left;
+  margin: 22px; }
+
+main #main {
+  margin: 0 auto;
+  width: 1000px;
+  padding-bottom: 50px; }
+
+main #main h2 {
+  text-align: center;
+  font: 32px/32px 'Microsoft Yahei';
+  padding: 25px 0;
+  color: #606060; }
+
+main #main .form {
+  font-size: 14px;
+  padding-left: 295px; }
+
+main #main .form div input {
+  border-radius: 4px;
+  width: 200px;
+  height: 18px;
+  padding: 10px 14px;
+  border: 1px solid #e6e6e6;
+  background: #fff; }
+
+main #main .form #spanId {
+  color: #606060;
+  font: 15px/20px "";
+  padding-left: 30px;
+  display: inline-block; }
+
+main #main .form div {
+  margin-bottom: 12px;
+  position: relative;
+  width: 100%; }
+
+main #main .form div b {
+  display: inline-block;
+  width: 80px;
+  text-align: right;
+  font: 14px/40px "微软雅黑";
+  color: #606060; }
+
+main #main .form div:nth-of-type(5) {
+  margin: 20px 0; }
+
+main #main .form div:nth-of-type(5) input {
+  margin-left: 100px;
+  width: 20px;
+  margin-right: 5px;
+  vertical-align: middle; }
+
+main #main .form div:nth-of-type(5) span {
+  font: 14px/16px "微软雅黑";
+  color: #606060; }
+
+main #main .form .zhuce {
+  margin-left: 100px;
+  display: inline-block;
+  text-align: center;
+  font: 16px/25px "微软雅黑";
+  background: #005aa9;
+  color: #fff;
+  padding: 8px 30px 7px 25px;
+  border-radius: 3px; }
+
+footer {
+  background: #e1e1e1;
+  text-align: center;
+  height: 139px;
+  padding-top: 21px;
+  font: 12px/24px "";
+  color: #606060; }
+
+footer a {
+  color: #606060; }
+
+footer a:hover {
+  color: #005AAA; }
+
+footer .footer-b {
+  padding-top: 10px; }
+
+footer .footer-b img {
+  width: 108px;
+  height: 40px; }
+
+/*# sourceMappingURL=register.css.map */
