@@ -12,11 +12,11 @@ $(function(){
 		});
 		
 		$(".zhuce").click(function(){
-			$.post("zhuce.php",{userName:$("#userName").val(),userPass:$("#userPass").val()},function(data){
+			$.post("register.php",{userName:$("#userName").val(),userPass:$("#userPass").val()},function(data){
 				if(data==1){
 					alert("恭喜您，注册成功");
 				}else{
-					alert("0.0出错了……");
+					alert("0.0……");
 				}
 			})
 		})

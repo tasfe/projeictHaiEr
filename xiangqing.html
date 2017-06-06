@@ -2,9 +2,9 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>商品列表</title>
+		<title>详情页</title>
 		<link type="text/css" rel="stylesheet" href="css/public.css" />
-		<link type="text/css" rel="stylesheet" href="css/goods-list.css" />
+		<link type="text/css" rel="stylesheet" href="css/xiangqing.css" />
 	</head>
 	<body>
 		<div id="top">
@@ -117,20 +117,34 @@
 				</div>
 			</div>
 		</nav>
+
 		<section id="main">
-			<div class="main-t margin">
-				<ul class="ul-four">
-					<li>
-						<a href="#"><img src="img/dianshiji1.jpg" /></a>
-						<dl>
-							<dt><a href="#">海尔高效定频壁挂式空调</a></dt>
-							<dd><a href="#">KFR-33GW/10EBBAL13U1套机</a></dd>
-							<dd class="over">【嗨购6月 开门抢鲜】①价保618②花呗6期分期免息 活动时间6月1日0:00-6月2日24:00，活动价2999元！</dd>
-							<i>¥2299</i>
-						</dl>
-						<p><span>下单立减20元</span></p>
-					</li>
-				</ul>
+			<div id="main-t">
+				<div class="tu clear">
+					<div class="tu-l">
+						<div class="img-t">
+							
+						</div>
+						<div class="img-b">
+							
+						</div>
+					</div>
+					<div class="tu-r">
+						<p>MOOKA智能电视55Q3M</p>
+						<p><b>商城价：</b><span>￥3099</span></p>
+						<p><b>已售出：</b><span>12866台</span></p>
+						<p><b>服务承诺：</b><span>送货入户（违约赔付100元）</span></p>
+						<div class="tu-r-b">
+							<div class="num">
+								<b>我要买：</b><input id="btn1" type="button" value="-" />
+								<input id="input1" type="text" value="0"/>
+								<input id="btn2" type="button" value="+" />
+							</div>
+							<a href="#">立即购买</a>
+							<a href="#">加入购物车</a>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="shouhou margin">
 				<h3>售后服务和保修政策</h3>
@@ -193,7 +207,6 @@
 					<dd><a href="#">超时免单</a></dd>
 				</dl>
 			</div>
-			
 		</section>
 		
 		<footer>
@@ -228,30 +241,7 @@
 </html>
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript">
-	
-	
 	$(function(){
-		
-		$.get("getGoodsList.php",function(data){
-			var obj = eval(data);
-			for(var i=0; i<obj.length;i++){
-				$(".ul-four").append('<li>'
-					+'<a href="#"><img src='+obj[i].goodsImg+' /></a>'
-					+'<dl>'
-					+'<dt><a href="#">'+obj[i].goodsId+'</a></dt>'
-					+'<dd><a href="#">'+obj[i].goodsName+'</a></dd>'
-					+'<dd class="over">'+obj[i].goodsType+'</dd>'
-					+'<i>'+obj[i].goodsPrice+'</i>'
-					+'</dl>'
-					+'<p><span>'+obj[i].goodsDesc+'</span></p>'
-					+'</li>');
-			};
-		})	
-		
-		
-		
-		
-		
 	$(".ul1 li").eq(0).on("mouseenter",function(){
 		$(".bingxiang").css({display:"block"});
 		$(".bingxiang-l").animate({
