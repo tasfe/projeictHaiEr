@@ -188,7 +188,7 @@ Slideshow.prototype.initUI=function(){
 }
 
 $(function(){
-//banner
+//banner 轮播图
 	new  Slideshow({
 		boxId:"Slide",
 		imgs:["img/banner1.jpg","img/banner2.jpg","img/banner3.jpg","img/banner4.jpg","img/banner5.jpg"],
@@ -203,8 +203,18 @@ $(function(){
 		btnHasOrd:false 
 	});
 
+//cookie
+		if(getCookie("userName")!=""){
+			$(".top-r").children("span").eq(0).html("欢迎您"+getCookie("userName"));
+			$(".top-r a").eq(0).css({display:"none"});
+			$(".top-r a").eq(1).html("退出");
+			$(".top-r a").eq(1).attr("href","login.html");
+		}
+		$(".top-r a").eq(1).click(function(){
+			removeCookie("userName");
+		})
 
-//nav
+//nav 选项卡
 	$(".ul1 li").eq(0).on("mouseenter",function(){
 		$(".bingxiang").css({display:"block"});
 		$(".bingxiang-l").animate({
@@ -249,17 +259,14 @@ $(function(){
 	})
 
 
-//main-top
+//main-top 商品列表
 	$(".main-top li").eq(0).on("mouseenter",f1);
 	$(".main-top li").eq(1).on("mouseenter",f2);
 	$(".main-top li").eq(2).on("mouseenter",f3);
 	$(".main-top li").eq(3).on("mouseenter",f4);	
 })
-//nav
-function nav1(){
-	
-}
-//main-top
+
+//main-top 商品列表
 function f1(){
 	$(".ul-l").animate({
 		left:"0%",

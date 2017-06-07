@@ -86,23 +86,31 @@ nav .nav .nav-r a{display:block;color:#fff;padding-left:42px;background:url(../i
 
 #main{padding-top:50px;}
 #main-t{background:#fff;}
-#main-t .tu{margin:0 auto;width:1000px;}
-#main-t .tu .tu-l{float:left;width:382px;}
-#main-t .tu .tu-l .img-t{height:382px;border:1px solid #ddd;}
-#main-t .tu .tu-l .img-b{height:95px;width:100%;border:1px solid #606060;}
-
-#main-t .tu .tu-r{padding-left:20px;float:right;height:500px;width:550px;border:1px solid #005AA9;}
+#main-t .tu{margin:0 auto;width:1000px;position:relative;}
+#main-t .tu .tu-l{width:382px;height:480px;}
+#main-t .tu .tu-r{padding-left:20px;position:absolute;top:10px;left:450px;height:500px;width:550px;}
 #main-t .tu .tu-r p:nth-of-type(1){height:50px;font:700 20px/50px "微软雅黑";}
 #main-t .tu .tu-r p:nth-of-type(2){height:50px;font:14px/30px "微软雅黑";color:#606060;}
 #main-t .tu .tu-r p:nth-of-type(3){height:50px;font:14px/30px "微软雅黑";color:#606060;}
-#main-t .tu .tu-r p:nth-of-type(4){height:50px;font:14px/30px "微软雅黑";color:#606060;}
-#main-t .tu .tu-r .tu-r-b .num{height:150px;}
+#main-t .tu .tu-r p:nth-of-type(4){height:50px;font:14px/30px "微软雅黑";color:#606060;position:relative;}
+#main-t .tu .tu-r p:nth-of-type(4) a{color:#606060;position:absolute;left:450px;}
+#main-t .tu .tu-r .tu-r-b{background:#f4f5f7;border:1px solid #ddd;padding:25px 0 25px 35px;}
+#main-t .tu .tu-r .tu-r-b .num{height:90px;}
 #main-t .tu .tu-r .tu-r-b .num b{font:14px/22px "微软雅黑";color:#606060;display:inline-block;margin-right:10px;}
 #main-t .tu .tu-r .tu-r-b .num input{color:#333;width:20px;height:22px;background:none;border:1px solid #ddd;vertical-align: middle;}
 #main-t .tu .tu-r .tu-r-b .num input:nth-of-type(2){box-sizing: border-box;text-align: center;}
-#main-t .tu .tu-r .tu-r-b{}
+#main-t .tu .tu-r .tu-r-b .num .num-b{padding-top:20px;height:50px;font:14px/30px "微软雅黑";color:#606060;}
 #main-t .tu .tu-r .tu-r-b a{text-align:center;display:inline-block;width:120px;height:40px;border-radius:3px;font:700 16px/40px "";background:#d71249;color:#fff;}
 #main-t .tu .tu-r .tu-r-b a:nth-of-type(2){background:#0f4bad;}
+
+#main .xiangqing{padding-top:50px;margin:0 auto;width:1000px;}
+#main .xiangqing ul h3{text-align: center;font:14px/40px "";color:#606060;background:#e7e7e7;border-radius:4px 4px 0 0;}
+#main .xiangqing ul{margin-right:15px;float:left;border-radius:4px 4px 0 0;border:1px solid #ddd;}
+#main .xiangqing ul li{padding:15px 30px;border-top:1px solid #ddd;}
+#main .xiangqing ul li a{display:inline-block;padding-top:130px;background:url(../img/kenengxihuan1.jpg) no-repeat;}
+#main .xiangqing ul li a p{font:12px/12px "微软雅黑";color:#333;}
+
+#main .xiangqing .xiangqing-r{padding:15px;width:100%;}
 
 
  

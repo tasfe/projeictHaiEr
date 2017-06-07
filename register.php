@@ -2,7 +2,7 @@
 	header("Content-type","text/html;charset=utf-8");
 	
 	//1、建立连接（搭桥）
-	$conn = mysql_connect("localhost:3306","liuyuzhen","liuyuzhen");
+	$conn = mysql_connect("localhost:3306","root","qianfeng");
 	
 	//2、选择数据库
 	mysql_select_db("Yelean",$conn);

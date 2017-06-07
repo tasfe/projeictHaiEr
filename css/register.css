@@ -66,6 +66,7 @@ main #main .form div:nth-of-type(5) span {
   color: #606060; }
 
 main #main .form .zhuce {
+  border: none;
   margin-left: 100px;
   display: inline-block;
   text-align: center;

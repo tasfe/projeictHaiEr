@@ -58,7 +58,7 @@
 						<input id="input1" type="text" value="0"/>
 						<input id="btn2" type="button" value="+" />
 					</li>
-					<li id="xiaoji1">¥0</li>
+					<li id="xiaoji1">0</li>
 					<li><span>删除</span></li>
 				</ul>
 				<ul class="chek2">
@@ -180,17 +180,30 @@
 	
 	
 $(function(){
+	
+	//cookie
+		if(getCookie("userName")!=""){
+			$(".top-r").children("span").eq(0).html("欢迎您"+getCookie("userName"));
+			$(".top-r a").eq(0).css({display:"none"});
+			$(".top-r a").eq(1).html("退出");
+			$(".top-r a").eq(1).attr("href","login.html");
+		}
+		$(".top-r a").eq(1).click(function(){
+			removeCookie("userName");
+		})
+	
+	
 	$("#btn1").click(function(){
 		if(document.getElementById("input1").value>0){
 			document.getElementById("input1").value--;
-			//document.getElementById("xiaoji").innerHTML = parseInt(document.getElementById("danjia1").innerHTML) *parseInt(document.getElementById("input1").value) ;
-			//document.getElementById("heji").innerHTML=parseInt(document.getElementById("xiaoji1").innerHTML)+parseInt(document.getElementById("xiaoji2").innerHTML);
+			//$("#xiaoji").HTML(parseInt($("#danjia1").HTML()) *parseInt($("#input1").val()));
+			//$("#heji").HTML(parseInt($("#xiaoji1").HTML())+parseInt($("#xiaoji2").HTML()));
 		};
 	});
 	$("#btn2").click(function(){
 		document.getElementById("input1").value++;
-		//document.getElementById("xiaoji").innerHTML = parseInt(document.getElementById("danjia1").innerHTML) *parseInt(document.getElementById("input1").value) ;
-		//document.getElementById("heji").innerHTML=parseInt(document.getElementById("xiaoji1").innerHTML)+parseInt(document.getElementById("xiaoji2").innerHTML);
+		//$("#xiaoji").HTML(parseInt($("#danjia1").HTML()) *parseInt($("#input1").val()));
+		//$("#heji").HTML(parseInt($("#xiaoji1").HTML())+parseInt($("#xiaoji2").HTML()));
 	});
 	
 	
