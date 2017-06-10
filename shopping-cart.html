@@ -35,7 +35,7 @@
 		</div>
 		
 		<header class="margin clear">
-			<a class="logo" href="#"><img src="img/logo.png"/></a>
+			<a class="logo" href="index.html"><img src="img/logo.png"/></a>
 			
 		</header>
 		
@@ -49,34 +49,34 @@
 					<li><span>小计</span></li>
 					<li><span>操作</span></li>
 				</ul>
-				<ul class="chek1">
+				<ul class="chek">
 					<li><input type="checkbox" checked="checked"/><a href="#"><img src="img/s-2.jpg"/></a></li>
-					<li><b id="mingcheng1">MOOKA彩电U55A5</b></li>
-					<li id="danjia1">3599</li>
+					<li><b class="mingcheng">MOOKA彩电U55A5</b></li>
+					<li class="danjia">¥<span>3599</span></li>
 					<li>
-						<input id="btn1" type="button" value="-" />
-						<input id="input1" type="text" value="0"/>
-						<input id="btn2" type="button" value="+" />
+						<input class="btn1" type="button" value="-" />
+						<input class="input" type="text" value="0"/>
+						<input class="btn2" type="button" value="+" />
 					</li>
-					<li id="xiaoji1">0</li>
-					<li><span>删除</span></li>
+					<li class="xiaoji">¥<span>0</span></li>
+					<li><span class="delete">删除</span></li>
 				</ul>
-				<ul class="chek2">
+				<ul class="chek">
 					<li><input type="checkbox" checked="checked"/><a href="#"><img src="img/s-1.jpg"/></a></li>
-					<li><b id="mingcheng2">MOOKA彩电U55Q81</b></li>
-					<li id="danjia2">¥3499</li>
+					<li><b class="mingcheng">MOOKA彩电U55Q81</b></li>
+					<li class="danjia2">¥<span>3499</span></li>
 					<li>
-						<input id="btn3" type="button" value="-" />
-						<input id="input2" type="text" />
-						<input id="btn4" type="button" value="+" />
+						<input class="btn1" type="button" value="-" />
+						<input class="input1" type="text" value="0"/>
+						<input class="btn2" type="button" value="+" />
 					</li>
-					<li id="xiaoji2">¥0</li>
-					<li><span>删除</span></li>
+					<li class="xiaoji1">¥<span>0</span></li>
+					<li><span class="delete">删除</span></li>
 				</ul>
 				<div class="jiesuan">
 					<div class="total">
 						<span>订单总计:</span>
-						<i id="heji">¥0</i>
+						<i class="heji">¥<span>0</span></i>
 					</div>
 				</div>
 			</div>
@@ -175,6 +175,7 @@
 	</body>
 </html>
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/cookieTools1702.js"></script>
 <script type="text/javascript">
 	
 	
@@ -192,32 +193,100 @@ $(function(){
 			removeCookie("userName");
 		})
 	
+	$.get("getShoppingCart.php",{vipName:getCookie("userName")},function(data){
+		var obj = eval('('+data+')');
+		$(".shopping-top").after(
+			'<ul class="chek">'
+			+'<li><input type="checkbox" checked="checked"/><a href="#"><img src="img/s-2.jpg"/></a></li>'
+			+'<li><b class="mingcheng">'+obj.goodsId+'</b></li>'
+			+'<li class="danjia">¥<span>'+obj.goodsPrice+'</span></li>'
+			+'<li>'
+			+'<input class="btn1" type="button" value="-" />'
+			+'<input class="input" type="text" value="0"/>'
+			+'<input class="btn2" type="button" value="+" />'
+			+'</li>'
+			+'<li class="xiaoji">¥<span>0</span></li>'
+			+'<li><span class="delete">删除</span></li>'
+			+'</ul>'
+		)
+	})
 	
-	$("#btn1").click(function(){
-		if(document.getElementById("input1").value>0){
-			document.getElementById("input1").value--;
-			//$("#xiaoji").HTML(parseInt($("#danjia1").HTML()) *parseInt($("#input1").val()));
-			//$("#heji").HTML(parseInt($("#xiaoji1").HTML())+parseInt($("#xiaoji2").HTML()));
-		};
-	});
-	$("#btn2").click(function(){
-		document.getElementById("input1").value++;
-		//$("#xiaoji").HTML(parseInt($("#danjia1").HTML()) *parseInt($("#input1").val()));
-		//$("#heji").HTML(parseInt($("#xiaoji1").HTML())+parseInt($("#xiaoji2").HTML()));
-	});
-	
-	
-	
-	
-	$("#btn3").click(function(){
-		if(document.getElementById("input2").value>0){
-			document.getElementById("input2").value--;
-		};
-	});
-	$("#btn4").click(function(){
-		document.getElementById("input2").value++;
-	});
 	
 })
 	
+	//$("#btn1").live("click",function(){
+	document.getElementById("btn1").onclick=function(){
+		if($(this).next(".input1").val()>0){
+			let num=$(this).next(".input1").val();
+			num--;
+			$(this).next(".input1").val(num);
+			//$("#xiaoji1 span").html(parseInt($("#danjia1 span").html()) *parseInt($("#input1").val()));
+			$(this).parent().next(".xiaoji1 span").html(parseInt($(this).parent().prev(".danjia1 span").html())*parseInt($(this).next(".input1").val()));
+			//$("#heji span").html(parseInt($(this).parent().next(".xiaoji1 span").html())+parseInt($("#xiaoji2 span").html()));
+		};
+	};
+	$(".btn2").live("click",function(){
+		let num=$(this).prev(".input1").val();
+		num++;
+		$(this).next(".input1").val(num);
+		//$("#xiaoji1 span").html(parseInt($("#danjia1 span").html())*parseInt($("#input1").val()));
+		$(this).parent().next(".xiaoji1 span").html(parseInt($(this).parent().prev(".danjia1 span").html())*parseInt($(this).prev(".input1").val()))
+		//$("#heji span").html(parseInt($("#xiaoji1 span").html())+parseInt($("#xiaoji2 span").html()));
+	});
+		
+	/*
+	$(function(){		
+		$("#register-enroll-span").html(getCookie("name"));
+		$.get("houtai/getShoppingCart.php", {vipName:getCookie("name")},function(data){
+		var data=eval('('+data+')');
+		console.log(data);
+		var heji=0;
+		var heji1=0;
+		for(var i=0;i<data.length;i++){
+			$("#shopping-main-div-00").append('<ul class="chek1"><li><a href="#"><img src="'+data[i].beiyong4+'"/></a></li><li><b class="mingcheng1">'+data[i].goodsName+'</b></li><li class="danjia1">$<span>'+data[i].goodsPrice+'</span></li><li class="shopping-top-li"><input class="btn1" type="button" value="-" /><input class="input1" type="text" value="'+data[i].goodsCount+'"/><input class="btn2" type="button" value="+" /></li><li class="xiaoji1">￥<span>'+parseInt(data[i].goodsPrice)*parseInt(data[i].goodsCount)+'</span></li><li><input type="button" class="span03" id="'+data[i].goodsId+'" value="删除"/></li></ul>');
+		heji+=parseInt(data[i].goodsPrice)*parseInt(data[i].goodsCount);	
+		}
+		saveCookie("pzhi",$("#shopping-main-div-00").children().length-1,7);
+		$("#heji").html("$"+heji);
+		$(".btn1").live("click", function() {
+			var spanzhi=$(this).next().val();
+		if(spanzhi>0){
+			spanzhi=parseInt(spanzhi)-1;
+			$(this).next().val(spanzhi);
+			$(this).parent().next().html("$"+spanzhi*$(this).parent().prev().children().html());		
+		heji-=parseInt($(this).parent().prev().children().html());
+		$("#heji").html("$"+heji)
+		}
+		$.get("houtai/addShoppingCart.php",{vipName:getCookie("name"),goodsId:$(this).parent().nextAll().children("input").attr("id"),goodsCount:-1},function(data){
+	  		if(data=="1"){
+	  			//alert("修改成功");
+	  		}	  	
+		});
+
+		
+	});
+	$(".btn2").live("click", function() {
+  		var spanzhi=$(this).prev().val();		
+			spanzhi=parseInt(spanzhi)+1;
+			$(this).prev().val(spanzhi);
+			$(this).parent().next().html("$"+spanzhi*$(this).parent().prev().children().html());
+	    heji+=parseInt($(this).parent().prev().children().html());
+		$("#heji").html("$"+heji);
+		$.get("houtai/addShoppingCart.php",{vipName:getCookie("name"),goodsId:$(this).parent().nextAll().children("input").attr("id"),goodsCount:1},function(data){
+	  		if(data=="1"){
+	  			//alert("修改成功");
+	  		}	  	
+		});
+	})
+	});	
+		
+	});
+	$(".span03").live("click",function(){
+			$.get("houtai/deleteGoods.php", {vipName:getCookie("name"),goodsId:$(this).attr("id")},function(data){
+			if(data==true){								
+				location.href="shoppingCar.html";				
+			}
+		})
+	})*/
+
 </script>

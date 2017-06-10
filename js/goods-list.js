@@ -12,10 +12,10 @@ $(function(){
 			var obj = eval(data);
 			for(var i=0; i<obj.length;i++){
 				$(".ul-four").append('<li>'
-					+'<a href="#"><img src='+obj[i].goodsImg+' /></a>'
+					+'<a href="xiangqing.html"><img src='+obj[i].goodsImg+' /></a>'
 					+'<dl>'
-					+'<dt><a href="#">'+obj[i].goodsId+'</a></dt>'
-					+'<dd><a href="#">'+obj[i].goodsName+'</a></dd>'
+					+'<dt><a href="xiangqing.html">'+obj[i].goodsId+'</a></dt>'
+					+'<dd><a href="xiangqing.html">'+obj[i].goodsName+'</a></dd>'
 					+'<dd class="over">'+obj[i].goodsType+'</dd>'
 					+'<i>'+obj[i].goodsPrice+'</i>'
 					+'</dl>'
@@ -24,6 +24,11 @@ $(function(){
 			};
 		})	
 		
+	//cookie保存goodsId
+	$(".ul-four").delegate("li","click",function(){
+		saveCookie("goodsId",$(this).children("dl").children("dt").children("a").html(),1);
+		//alert(getCookie("goodsId"));
+	})
 	//nav 选项卡
 		$(".ul1 li").eq(0).on("mouseenter",function(){
 			$(".bingxiang").css({display:"block"});

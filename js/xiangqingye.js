@@ -10,7 +10,44 @@
 			removeCookie("userName");
 		})
 	
+		
+		$.get("getGoodsInfo.php",{goodsId:getCookie("goodsId")},function(data){
+			var obj = eval('('+data+')');
+			//var obj = JSON.parse(data);
+			$(".tu-r-b").before(
+				'<p>'+obj.goodsId+'</p>'
+				+'<p><b>商城价：</b>￥<span>'+obj.goodsPrice+'</span></p>'
+				+'<p><b>产品编号：</b><span>'+obj.goodsName+'</span></p>'
+				+'<p><b>活动：</b><span>'+obj.goodsType+'</span><a href="#">去手机购买></a></p>'
+				
+			);
+		
+			new ShowGoods({
+				boxId:"tu-l",
+				boxWidth:425,
+				boxHeight:480,
+				times:2,
+				imgArr:[obj.beiyong1,obj.beiyong2,obj.beiyong3,obj.beiyong4,obj.beiyong5,"img/d6.jpg"],
+				imgWidth:380,
+				imgHeight:380,
+				zoomColor:'yellow',
+				zoomWidth:150,
+				zoomHeight:150,
+				listWidth:100,
+				listHeight:100,
+				listBorderColor:'#AAA',      //边框颜色
+				listBorderHeighColor:'red',
+				listSpace:5,                 //间距
+				listNum:4,
+				btnWidth:20,
+				btnColor:'black',
+				btnFontSize:30,
+				btnFontColor:'white',
+				btnFontHeighColor:'red'
+			})
+		})
 	
+	//nav 选项卡
 		$(".ul1 li").eq(0).on("mouseenter",function(){
 			$(".bingxiang").css({display:"block"});
 			$(".bingxiang-l").animate({
@@ -55,6 +92,32 @@
 		})
 	})
 	
+	//加入购物车
+		$("#buy").click(function(){
+			if(getCookie("userName")!=""){
+				$.post("addShoppingCart.php",{vipName:getCookie("userName"),goodsId:getCookie("goodsId"),goodsCount:$("#input1").val()},function(data){
+					saveCookie("buyNum",$("#input1").val(),1);
+					//alert(data);
+					//alert(getCookie("buyNum"));
+					alert("加入成功");
+				})
+			}
+		})
+	
+	//添加商品
+		$("#btn1").click(function(){
+			if($("#input1").val()>0){
+				var num = $("#input1").val();
+				num--;
+				$("#input1").val(num);
+			};
+		})
+		
+		$("#btn2").click(function(){
+			let num = $("#input1").val();
+			num++;
+			$("#input1").val(num);
+		})
 	
 	function ShowGoods(json){
 	this.boxId="#"+json.boxId;
@@ -207,7 +270,7 @@
 	this.addEvent();
 }
 
-$(function(){
+/*function(){
 	new ShowGoods({
 		boxId:"tu-l",
 		boxWidth:425,
@@ -231,4 +294,4 @@ $(function(){
 		btnFontColor:'white',
 		btnFontHeighColor:'red'
 	})
-})
+}*/

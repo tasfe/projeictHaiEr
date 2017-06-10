@@ -316,7 +316,8 @@ nav .nav .nav-r a {
   padding-top: 50px; }
 
 #main-t {
-  background: #fff; }
+  background: #fff;
+  height: 500px; }
 
 #main-t .tu {
   margin: 0 auto;
@@ -331,7 +332,7 @@ nav .nav .nav-r a {
   padding-left: 20px;
   position: absolute;
   top: 10px;
-  left: 450px;
+  right: 0px;
   height: 500px;
   width: 550px; }
 
@@ -392,7 +393,7 @@ nav .nav .nav-r a {
   font: 14px/30px "微软雅黑";
   color: #606060; }
 
-#main-t .tu .tu-r .tu-r-b a {
+#main-t .tu .tu-r .tu-r-b i {
   text-align: center;
   display: inline-block;
   width: 120px;
@@ -402,7 +403,7 @@ nav .nav .nav-r a {
   background: #d71249;
   color: #fff; }
 
-#main-t .tu .tu-r .tu-r-b a:nth-of-type(2) {
+#main-t .tu .tu-r .tu-r-b i:nth-of-type(2) {
   background: #0f4bad; }
 
 #main .xiangqing {

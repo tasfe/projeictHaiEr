@@ -27,14 +27,14 @@
 	while($query_row){
 		$str = $str."{ 'goodsId':'".$query_row[0]."','goodsName':'".$query_row[1]."'
 		,'goodsType':'".$query_row[2]."','goodsPrice':'".$query_row[3]."'
-		,'goodsCount':'".$query_row[4]."','goodsDesc':'".$query_row[5]."'
+		,'goodsCount':'".$query_row[22]."','goodsDesc':'".$query_row[5]."'
 		,'goodsImg':'".$query_row[6]."','beiyong1':'".$query_row[7]."'
 		,'beiyong2':'".$query_row[8]."','beiyong3':'".$query_row[9]."'
 		,'beiyong4':'".$query_row[10]."','beiyong5':'".$query_row[11]."'
 		,'beiyong6':'".$query_row[12]."','beiyong7':'".$query_row[13]."'
 		,'beiyong8':'".$query_row[14]."','beiyong9':'".$query_row[15]."'
 		,'beiyong10':'".$query_row[16]."','beiyong11':'".$query_row[17]."'
-		,'beiyong12':'".$query_row[18]."','beiyong13':'".$query_row[19]."'
+		,'beiyong12':'".$query_row[18]."','beiyong13':'".$query_row[19]."','goodsSum':'".$query_row[22]."'
 		}";
 		$query_row = mysql_fetch_array($result);
 		if($query_row){

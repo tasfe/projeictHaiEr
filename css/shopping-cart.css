@@ -94,7 +94,7 @@ header .logo {
   padding-left: 30px;
   color: #606060; }
 
-#main .shopping .chek1 {
+#main .shopping .chek {
   border-top: 1px solid #e2e2e2;
   background: #eaf9ff;
   display: flex;
@@ -102,24 +102,24 @@ header .logo {
   justify-content: space-between;
   padding: 30px 0 10px 0; }
 
-#main .shopping .chek1 li {
+#main .shopping .chek li {
   width: 130px;
   font: 12px/12px "微软雅黑";
   padding-left: 30px;
   color: #333; }
 
-#main .shopping .chek1 li:nth-of-type(1) {
+#main .shopping .chek li:nth-of-type(1) {
   margin-top: -10px; }
 
-#main .shopping .chek1 li:nth-of-type(3) {
+#main .shopping .chek li:nth-of-type(3) {
   font: 700 12px/12px "微软雅黑";
   color: #333; }
 
-#main .shopping .chek1 li:nth-of-type(5) {
+#main .shopping .chek li:nth-of-type(5) {
   font: 700 12px/12px "微软雅黑";
   color: #333; }
 
-#main .shopping .chek1 li:nth-of-type(4) input {
+#main .shopping .chek li:nth-of-type(4) input {
   color: #333;
   float: left;
   width: 20px;
@@ -127,45 +127,7 @@ header .logo {
   background: none;
   border: 1px solid #ffe0c6; }
 
-#main .shopping .chek1 li:nth-of-type(4) input:nth-of-type(2) {
-  width: 42px;
-  box-sizing: border-box;
-  text-align: center; }
-
-#main .shopping .chek2 {
-  border-top: 1px solid #e2e2e2;
-  background: #eaf9ff;
-  display: flex;
-  text-align: left;
-  justify-content: space-between;
-  padding: 30px 0 10px 0; }
-
-#main .shopping .chek2 li {
-  width: 130px;
-  font: 12px/12px "微软雅黑";
-  padding-left: 30px;
-  color: #333; }
-
-#main .shopping .chek2 li:nth-of-type(1) {
-  margin-top: -10px; }
-
-#main .shopping .chek2 li:nth-of-type(3) {
-  font: 700 12px/12px "微软雅黑";
-  color: #333; }
-
-#main .shopping .chek2 li:nth-of-type(5) {
-  font: 700 12px/12px "微软雅黑";
-  color: #333; }
-
-#main .shopping .chek2 li:nth-of-type(4) input {
-  color: #333;
-  float: left;
-  width: 20px;
-  height: 22px;
-  background: none;
-  border: 1px solid #ffe0c6; }
-
-#main .shopping .chek2 li:nth-of-type(4) input:nth-of-type(2) {
+#main .shopping .chek li:nth-of-type(4) input:nth-of-type(2) {
   width: 42px;
   box-sizing: border-box;
   text-align: center; }

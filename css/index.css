@@ -154,14 +154,7 @@ nav .nav .nav-l .nav-l-t a {
   color: #fff;
   text-align: center; }
 
-nav .nav .nav-l .nav-l-t:hover ~ .nav-l-b {
-  display: block; }
-
-nav .nav .nav-l .nav-l-b:hover {
-  display: block; }
-
 nav .nav .nav-l .nav-l-b {
-  display: none;
   width: 192px;
   background: rgba(0, 0, 0, 0.6);
   position: absolute; }
