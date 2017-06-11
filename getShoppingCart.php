@@ -7,7 +7,7 @@
 	$conn = mysql_connect("localhost","root","qianfeng");
 	
 	//2）、选择数据库（找目的地）
-	mysql_select_db("shoppingcenter",$conn);
+	mysql_select_db("yelean",$conn);
 	
 	//3）、传输数据（过桥）
 	$sqlstr = "select * from goodsInfo g,shoppingCart s
